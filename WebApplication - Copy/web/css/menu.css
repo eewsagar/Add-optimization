@@ -1,0 +1,95 @@
+
+/* COMMON CLASSES */
+
+/* CONTENT */
+
+
+/* APPLE STYLE NAVIGATION MENU */
+#appleNav { margin:0px 0; list-style:none;
+
+            /* Lucinda Grande is the font used on the website from Apple. */
+            font-family: "Cambria", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; letter-spacing:-0.5px; font-size:13px;
+
+            /* Apply a subtle text-shadow to the text */
+            text-shadow: 0 -1px 3px #202020;
+
+            /* We want to add the shadow to the complete navigation menu. In order to do that, we'll need to set
+            the correct width and height, and also the correct borders, in order to create the perfect drop shadow */
+            width:980px; height:34px;
+
+            -moz-border-radius:4px;
+            -webkit-border-radius:4px;
+            border-radius:4px;
+
+            -moz-box-shadow: 0px 3px 3px #cecece;
+            -webkit-box-shadow: 0px 3px 3px #cecece;
+            box-shadow: 0 3px 4px #8b8b8b;
+}
+
+#appleNav li { display:block; float:left; border-right:1px solid #5d5d5d; border-left:1px solid #929292; width:105px; height:34px; border-bottom:1px solid #575757; border-top:1px solid #797979;
+
+               /* Gradient backgrounds for the buttons. Generated using http://gradients.glrzad.com/ */
+               background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #787878), color-stop(0.5, #5E5E5E), color-stop(0.51, #707070), color-stop(1, #838383));
+               background-image: -moz-linear-gradient(center bottom, #787878 0%, #5E5E5E 50%, #707070 51%, #838383 100%);
+               background-color:#5f5f5f; /* Fallback */
+}
+
+/* Set the states when hovering, except for the last item in the list (the search bar), since it doesn't need to change */
+#appleNav li:not(:last-child):hover {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3F3F3F), color-stop(0.5, #383838), color-stop(0.51, #434343), color-stop(1, #555555));
+    background-image: -moz-linear-gradient(center bottom, #3F3F3F 0%, #383838 50%, #434343 51%, #555555 100% );
+    background-color:#383838; /* Fallback */
+
+    /* We use the inset of the box shadow to create a subtle inner glow when hovering */
+    -moz-box-shadow: inset 0 0 5px 5px #535353;
+    -webkit-box-shadow: inset 0 0 5px 5px #535353;
+    box-shadow: inset 0 0 5px 5px #535353;
+}
+
+/* When the user clicks the button, we simply change the box inset (compared to the "hover") */
+#appleNav li:not(:last-child):active {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3F3F3F), color-stop(0.5, #383838), color-stop(0.51, #434343), color-stop(1, #555555));
+    background-image: -moz-linear-gradient(center bottom, #3F3F3F 0%, #383838 50%, #434343 51%, #555555 100% );
+    background-color:#383838; /* Fallback */
+
+    -moz-box-shadow: inset 0 1px 2px 2px #000;
+    -webkit-box-shadow: inset 0 1px 2px 2px #000;
+    box-shadow: inset 0 1px 2px 2px #000;
+}
+
+#appleNav li a { color:white; text-decoration:none; text-align:center; display:block; line-height:34px; outline:none; }
+
+/* Styling of the search field */
+
+/* Rounded corner for the first in last item. Shorthand: Top left, Top right, Bottom right, Bottom left.
+We also remove the borders, since they don't need them. */
+#appleNav li:first-child {
+    -moz-border-radius:4px 0 0 4px;
+    -webkit-border-radius:4px 0 0 4px;
+    border-radius:4px 0 0 4px;
+
+    border-left:none;
+}
+
+/* The first child image - the logo - has to be centered. Because of the image dimensions, we manually need to shift it a bit. */
+#appleNav li:first-child a img {
+    vertical-align:middle; margin-top:-2px;
+}
+
+#appleNav li:last-child {
+    -moz-border-radius:0 4px 4px 0;
+    -webkit-border-radius:0 4px 4px 0;
+    border-radius:0 4px 4px 0;
+
+    border-right:none;
+
+    /* The width of the last menu item (search bar) is bigger than the others */
+    width:124px;
+}
+
+
+/* Fade in animation (Webkit only) */
+@-webkit-keyframes showMenu {
+    from { opacity: 0; top:-20px; }
+    to   { opacity: 1; }
+}

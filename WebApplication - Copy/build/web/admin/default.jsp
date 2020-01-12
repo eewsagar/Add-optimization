@@ -1,0 +1,9 @@
+<h3>
+    Design Of Optimized Advertising
+</h3>
+<br>
+<p style="text-align: justify;line-height: 20px;">
+    A main goal of online display advertising is to drive purchases (etc.) following ad engagement. However, there often are too few purchase conversions for campaign evaluation and optimization, due to low conversion rates, cold start periods, and long purchase cycles (e.g., with brand advertising). This paper presents results across dozens of experiments within individual online display advertising campaigns, each comparing different proxies" for measuring success. Measuring success is critical both for evaluating and comparing different targeting strategies, and for designing and optimizing the strategies in the first place (for example, via predictive modeling). Proxies are necessary because data on the actual goals of advertising (e.g., purchasing, increased brand affinity, etc.) often are scarce, missing, or fundamentally difficult or impossible to observe. The paper presents bad news and good news. The most commonly cited and used proxy for success is a click on an advertisement. The bad news is that across a large number of campaigns, clicks are not good proxies for evaluation nor for optimization: buyers do not resemble clickers. The good news is that an alternative sort of proxy performs remarkably well: observed visits to the brand's website. Specifically, predictive models built based on brand site visits do a remarkably good job of predicting which browsers will purchase. The practical bottom line: evaluating campaigns and optimizing based on clicks seems wrongheaded; however, there is an easy and attractive alternative use a well-chosen site visit proxy instead.
+</p>
+<br/>
+<img src="../images/home.gif" style="height: 260px;width: 100%">
